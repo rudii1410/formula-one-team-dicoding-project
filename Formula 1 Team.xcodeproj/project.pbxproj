@@ -13,6 +13,9 @@
 		CF79914326773F5300B00F54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF79914126773F5300B00F54 /* Main.storyboard */; };
 		CF79914526773F5400B00F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF79914426773F5400B00F54 /* Assets.xcassets */; };
 		CF79914826773F5400B00F54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF79914626773F5400B00F54 /* LaunchScreen.storyboard */; };
+		CF79915A267741B200B00F54 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF799158267741B200B00F54 /* TeamCell.swift */; };
+		CF79915B267741B200B00F54 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF799159267741B200B00F54 /* TeamCell.xib */; };
+		CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79915D26774FBA00B00F54 /* FavouritesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CF79914426773F5400B00F54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF79914726773F5400B00F54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF79914926773F5400B00F54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF799158267741B200B00F54 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		CF799159267741B200B00F54 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		CF79915D26774FBA00B00F54 /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		CF79913A26773F5300B00F54 /* Formula 1 Team */ = {
 			isa = PBXGroup;
 			children = (
+				CF7991562677419300B00F54 /* View */,
 				CF79915426773FB800B00F54 /* Controller */,
 				CF79915326773F9500B00F54 /* Storyboard */,
 				CF79915026773F7500B00F54 /* Application */,
@@ -87,8 +94,26 @@
 			isa = PBXGroup;
 			children = (
 				CF79913F26773F5300B00F54 /* HomeVC.swift */,
+				CF79915D26774FBA00B00F54 /* FavouritesVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF7991562677419300B00F54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF7991572677419800B00F54 /* Table Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF7991572677419800B00F54 /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CF799158267741B200B00F54 /* TeamCell.swift */,
+				CF799159267741B200B00F54 /* TeamCell.xib */,
+			);
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF79915B267741B200B00F54 /* TeamCell.xib in Resources */,
 				CF79914826773F5400B00F54 /* LaunchScreen.storyboard in Resources */,
 				CF79914526773F5400B00F54 /* Assets.xcassets in Resources */,
 				CF79914326773F5300B00F54 /* Main.storyboard in Resources */,
@@ -161,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF79915A267741B200B00F54 /* TeamCell.swift in Sources */,
+				CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */,
 				CF79914026773F5300B00F54 /* HomeVC.swift in Sources */,
 				CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */,
 				CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */,
