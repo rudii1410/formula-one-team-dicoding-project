@@ -10,12 +10,10 @@ class InfoItem: TeamDetailItem {
         return .infoItem
     }
     
-    var lines: Int
     var title: String
     var desc: String
     
-    init(lines: Int, title: String, desc: String) {
-        self.lines = lines
+    init(title: String, desc: String) {
         self.title = title
         self.desc = desc
     }
