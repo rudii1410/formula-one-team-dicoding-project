@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920CF267B6714003A4716 /* TeamDetailItemType.swift */; };
+		CF4920D3267B679C003A4716 /* TeamDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920D2267B679C003A4716 /* TeamDetailItem.swift */; };
+		CF4920D6267B67E8003A4716 /* BannerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920D5267B67E8003A4716 /* BannerItem.swift */; };
+		CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920D8267B68AC003A4716 /* InfoItem.swift */; };
 		CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913B26773F5300B00F54 /* AppDelegate.swift */; };
 		CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913D26773F5300B00F54 /* SceneDelegate.swift */; };
 		CF79914026773F5300B00F54 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913F26773F5300B00F54 /* HomeVC.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF4920CF267B6714003A4716 /* TeamDetailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailItemType.swift; sourceTree = "<group>"; };
+		CF4920D2267B679C003A4716 /* TeamDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailItem.swift; sourceTree = "<group>"; };
+		CF4920D5267B67E8003A4716 /* BannerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItem.swift; sourceTree = "<group>"; };
+		CF4920D8267B68AC003A4716 /* InfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
 		CF79913826773F5300B00F54 /* Formula 1 Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1 Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF79913B26773F5300B00F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF79913D26773F5300B00F54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4920CD267B66E5003A4716 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF4920CF267B6714003A4716 /* TeamDetailItemType.swift */,
+				CF4920D2267B679C003A4716 /* TeamDetailItem.swift */,
+				CF4920D5267B67E8003A4716 /* BannerItem.swift */,
+				CF4920D8267B68AC003A4716 /* InfoItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CF79912F26773F5300B00F54 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +81,7 @@
 		CF79913A26773F5300B00F54 /* Formula 1 Team */ = {
 			isa = PBXGroup;
 			children = (
+				CF4920CD267B66E5003A4716 /* Model */,
 				CF7991562677419300B00F54 /* View */,
 				CF79915426773FB800B00F54 /* Controller */,
 				CF79915326773F9500B00F54 /* Storyboard */,
@@ -187,10 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4920D3267B679C003A4716 /* TeamDetailItem.swift in Sources */,
 				CF79915A267741B200B00F54 /* TeamCell.swift in Sources */,
 				CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */,
 				CF79914026773F5300B00F54 /* HomeVC.swift in Sources */,
 				CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */,
+				CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */,
+				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,
+				CF4920D6267B67E8003A4716 /* BannerItem.swift in Sources */,
 				CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

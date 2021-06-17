@@ -16,10 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnJ-fW-u5z">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NnJ-fW-u5z">
                         <rect key="frame" x="12" y="15" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="3kF-a9-Wh6"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="7ny-tA-spH"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="YTM-OK-6o2"/>
                             <constraint firstAttribute="height" constant="80" id="qrG-9H-stl"/>
                         </constraints>
                     </imageView>
@@ -58,4 +60,7 @@
             <point key="canvasLocation" x="204.34782608695653" y="159.375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="placeholder" width="620" height="600"/>
+    </resources>
 </document>
