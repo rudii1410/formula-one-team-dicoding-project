@@ -22,26 +22,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI0-92-TPw">
-                        <rect key="frame" x="28" y="55" width="264" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-r5-sV8">
+                        <rect key="frame" x="12" y="45" width="296" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="sI0-92-TPw" secondAttribute="trailing" constant="12" id="5pN-tf-N2V"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="sI0-92-TPw" secondAttribute="bottom" constant="16" id="EFR-v4-jGg"/>
-                    <constraint firstItem="o7z-d6-zad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="LgM-g2-JOg"/>
+                    <constraint firstItem="nCj-r5-sV8" firstAttribute="top" secondItem="o7z-d6-zad" secondAttribute="bottom" constant="8" id="52b-oM-OPc"/>
+                    <constraint firstItem="o7z-d6-zad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="LgM-g2-JOg"/>
                     <constraint firstItem="o7z-d6-zad" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="M4g-B9-g6w"/>
-                    <constraint firstItem="sI0-92-TPw" firstAttribute="top" secondItem="o7z-d6-zad" secondAttribute="bottom" constant="8" id="V8o-vn-Sf1"/>
-                    <constraint firstItem="sI0-92-TPw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="Y6f-Gp-MXv"/>
+                    <constraint firstItem="nCj-r5-sV8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="O2T-PI-Y7F"/>
+                    <constraint firstAttribute="bottom" secondItem="nCj-r5-sV8" secondAttribute="bottom" constant="12" id="dBv-Ne-OeY"/>
+                    <constraint firstAttribute="trailing" secondItem="nCj-r5-sV8" secondAttribute="trailing" constant="12" id="lNk-HP-dsf"/>
                     <constraint firstAttribute="trailing" secondItem="o7z-d6-zad" secondAttribute="trailing" constant="12" id="sEJ-ts-KEE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="desc" destination="sI0-92-TPw" id="cvX-s4-JAl"/>
+                <outlet property="desc" destination="nCj-r5-sV8" id="A6b-ws-qSe"/>
                 <outlet property="title" destination="o7z-d6-zad" id="7GI-ly-GPi"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.089285714285708"/>

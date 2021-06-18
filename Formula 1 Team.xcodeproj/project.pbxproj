@@ -16,6 +16,8 @@
 		CF4920EB267B6B37003A4716 /* InfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920E9267B6B37003A4716 /* InfoItemCell.swift */; };
 		CF4920EC267B6B37003A4716 /* InfoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4920EA267B6B37003A4716 /* InfoItemCell.xib */; };
 		CF4920F0267B7251003A4716 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4920EF267B7251003A4716 /* UIImageView.swift */; };
+		CF492103267B76BE003A4716 /* TeamDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF492101267B76BE003A4716 /* TeamDetailVC.swift */; };
+		CF492104267B76BE003A4716 /* TeamDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF492102267B76BE003A4716 /* TeamDetailVC.xib */; };
 		CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913B26773F5300B00F54 /* AppDelegate.swift */; };
 		CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913D26773F5300B00F54 /* SceneDelegate.swift */; };
 		CF79914026773F5300B00F54 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79913F26773F5300B00F54 /* HomeVC.swift */; };
@@ -37,6 +39,8 @@
 		CF4920E9267B6B37003A4716 /* InfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemCell.swift; sourceTree = "<group>"; };
 		CF4920EA267B6B37003A4716 /* InfoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoItemCell.xib; sourceTree = "<group>"; };
 		CF4920EF267B7251003A4716 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		CF492101267B76BE003A4716 /* TeamDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailVC.swift; sourceTree = "<group>"; };
+		CF492102267B76BE003A4716 /* TeamDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailVC.xib; sourceTree = "<group>"; };
 		CF79913826773F5300B00F54 /* Formula 1 Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1 Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF79913B26773F5300B00F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF79913D26773F5300B00F54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CF79913F26773F5300B00F54 /* HomeVC.swift */,
+				CF492101267B76BE003A4716 /* TeamDetailVC.swift */,
 				CF79915D26774FBA00B00F54 /* FavouritesVC.swift */,
 			);
 			path = Controller;
@@ -168,6 +173,7 @@
 		CF7991562677419300B00F54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF492102267B76BE003A4716 /* TeamDetailVC.xib */,
 				CF7991572677419800B00F54 /* Table Cell */,
 			);
 			path = View;
@@ -244,6 +250,7 @@
 				CF4920E6267B6B21003A4716 /* BannerItemCell.xib in Resources */,
 				CF79914826773F5400B00F54 /* LaunchScreen.storyboard in Resources */,
 				CF79914526773F5400B00F54 /* Assets.xcassets in Resources */,
+				CF492104267B76BE003A4716 /* TeamDetailVC.xib in Resources */,
 				CF4920EC267B6B37003A4716 /* InfoItemCell.xib in Resources */,
 				CF79914326773F5300B00F54 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +269,7 @@
 				CF79914026773F5300B00F54 /* HomeVC.swift in Sources */,
 				CF4920EB267B6B37003A4716 /* InfoItemCell.swift in Sources */,
 				CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */,
+				CF492103267B76BE003A4716 /* TeamDetailVC.swift in Sources */,
 				CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */,
 				CF4920E5267B6B21003A4716 /* BannerItemCell.swift in Sources */,
 				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,

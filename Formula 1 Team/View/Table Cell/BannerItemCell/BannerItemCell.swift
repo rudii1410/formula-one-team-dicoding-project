@@ -11,7 +11,6 @@ class BannerItemCell: UITableViewCell {
 
     @IBOutlet weak var teamBanner: UIImageView!
     @IBOutlet weak var teamLogo: UIImageView!
-    @IBOutlet weak var teamName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +26,5 @@ class BannerItemCell: UITableViewCell {
     func setData(data: BannerItem) {
         teamBanner.fromUrl(from: data.teamBannerUrl)
         teamLogo.fromUrl(from: data.teamLogoUrl)
-        teamName.text = data.teamName
     }
 }
