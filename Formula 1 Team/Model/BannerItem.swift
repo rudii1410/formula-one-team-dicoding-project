@@ -14,11 +14,9 @@ class BannerItem: TeamDetailItem {
     
     var teamBannerUrl: URL!
     var teamLogoUrl: URL!
-    var teamName: String
     
-    init(teamBannerUrl: String, teamLogoUrl: String, teamName: String) {
-        self.teamBannerUrl = URL(string: teamBannerUrl)
-        self.teamLogoUrl = URL(string: teamLogoUrl)
-        self.teamName = teamName
+    init(teamBannerUrl: String?, teamLogoUrl: String?) {
+        self.teamBannerUrl = URL(string: teamBannerUrl ?? "")
+        self.teamLogoUrl = URL(string: teamLogoUrl ?? "")
     }
 }

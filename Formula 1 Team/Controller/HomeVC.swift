@@ -73,6 +73,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = TeamDetailVC(nibName: "TeamDetailVC", bundle: nil)
+        detail.setData(data: self.formulaOneTeams[indexPath.row])
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }

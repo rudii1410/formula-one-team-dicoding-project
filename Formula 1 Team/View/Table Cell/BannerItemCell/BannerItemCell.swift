@@ -12,6 +12,8 @@ class BannerItemCell: UITableViewCell {
     @IBOutlet weak var teamBanner: UIImageView!
     @IBOutlet weak var teamLogo: UIImageView!
     
+    private let placeholderImage = UIImage(named: "placeholder")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,7 +26,7 @@ class BannerItemCell: UITableViewCell {
     }
     
     func setData(data: BannerItem) {
-        teamBanner.fromUrl(from: data.teamBannerUrl)
-        teamLogo.fromUrl(from: data.teamLogoUrl)
+        if let bannerUrl = data.teamBannerUrl { teamBanner.fromUrl(from: bannerUrl) } else { teamBanner.image = placeholderImage }
+        if let teamLogoUrl = data.teamLogoUrl { teamLogo.fromUrl(from: teamLogoUrl) } else { teamLogo.image = placeholderImage }
     }
 }

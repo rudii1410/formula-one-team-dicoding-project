@@ -29,6 +29,14 @@ struct FormulaOneTeam : Codable {
     let strTeamFanart4 : String?
     let strTeamBanner : String?
     let strYoutube : String?
+    
+    func getHeadquarter() -> String {
+        var headQuarter = "Unknown"
+        if let stadium = strStadium, !stadium.isEmpty { headQuarter = stadium }
+        else if let stadiumLocation = strStadiumLocation, !stadiumLocation.isEmpty { headQuarter = stadiumLocation }
+        
+        return headQuarter
+    }
 }
 
 struct Teams: Codable {

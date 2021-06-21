@@ -6,22 +6,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TeamDetailVC: UITableViewController {
 
     var items: [TeamDetailItem] = []
     var isFavourite: Bool = false
+    var team: FormulaOneTeam? = nil
+    let repo = FormulaTeamRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData()
         setupTable()
         setupNavigationBar()
     }
     
     private func setupNavigationBar() {
-        self.title = "Ferari team lalala yeyeye"
-        
         let favButton = UIBarButtonItem(image: getFavImage(), style: .plain, target: self, action: #selector(onFavouritePressed))
         self.navigationItem.rightBarButtonItem = favButton
     }
@@ -39,24 +39,43 @@ class TeamDetailVC: UITableViewController {
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.isUserInteractionEnabled = false
+        tableView.bounces = true
+        tableView.autoresizingMask = .flexibleHeight
+        tableView.allowsSelection = false
     }
     
-    func setData() {
+    func setData(data: FormulaOneTeam) {
+        self.title = data.strTeam!
+        self.team = data
+        
+        setFavourite(isFavourite: repo.isTeamInFavouritesList(id: data.idTeam!))
+        
         items.append(BannerItem(
-            teamBannerUrl: "https://www.formula1.com/content/dam/fom-website/manual/Misc/2021-Master-Folder/F1%202021%20LAUNCH%20RENDERING%20(2).jpg",
-            teamLogoUrl: "https://e7.pngegg.com/pngimages/710/189/png-clipart-scuderia-ferrari-ferrari-s-p-a-car-%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%87%E3%83%AA%E3%82%A2-formula-1-car-emblem-logo.png",
-            teamName: "Ferari team lalala yeyeye"
+            teamBannerUrl: data.strTeamBanner,
+            teamLogoUrl: data.strTeamLogo
         ))
+        
         items.append(InfoItem(
-            title: "About",
-            desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            title: "Founded at",
+            desc: data.intFormedYear!
         ))
         
         items.append(InfoItem(
             title: "About",
-            desc: "Sed ut per"
+            desc: data.strDescriptionEN!
         ))
+        
+        items.append(InfoItem(
+            title: "Headquarter",
+            desc: data.getHeadquarter()
+        ))
+        
+        items.append(InfoItem(
+            title: "Teams Origin",
+            desc: data.strCountry!
+        ))
+        
+        tableView.reloadData()
     }
     
     private func getFavImage() -> UIImage? {
@@ -64,9 +83,17 @@ class TeamDetailVC: UITableViewController {
     }
 
     @objc func onFavouritePressed() {
-        print("fav image")
-        isFavourite = !isFavourite
-        print(isFavourite)
+        let isFavourite = !self.isFavourite
+        if (isFavourite) {
+            if let team = team { repo.storeAsFavourite(team: team) }
+        } else {
+            if let idTeam = team?.idTeam { repo.deleteFromFavouritesList(id: idTeam) }
+        }
+        setFavourite(isFavourite: isFavourite)
+    }
+    
+    private func setFavourite(isFavourite: Bool) {
+        self.isFavourite = isFavourite
         self.navigationItem.rightBarButtonItem?.image = getFavImage()
     }
     
@@ -88,8 +115,6 @@ class TeamDetailVC: UITableViewController {
                 cell.setData(data: item as! InfoItem)
                 return cell
             }
-        default:
-            return UITableViewCell()
         }
         
         return UITableViewCell()

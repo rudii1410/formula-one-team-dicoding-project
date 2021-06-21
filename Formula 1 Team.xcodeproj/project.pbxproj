@@ -32,6 +32,7 @@
 		CFEE3DB426808F26003409B9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB326808F26003409B9 /* APIError.swift */; };
 		CFEE3DC52680A9B3003409B9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CFEE3DC42680A9B3003409B9 /* Realm */; };
 		CFEE3DC72680A9B3003409B9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFEE3DC62680A9B3003409B9 /* RealmSwift */; };
+		CFEE3DCA2680AA48003409B9 /* FavouriteTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DC92680AA48003409B9 /* FavouriteTeam.swift */; };
 		CFEE3DCE2680BB09003409B9 /* FormulaTeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */; };
 		CFEE3DD12680BB29003409B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DD02680BB29003409B9 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneTeam.swift; sourceTree = "<group>"; };
 		CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		CFEE3DB326808F26003409B9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CFEE3DC92680AA48003409B9 /* FavouriteTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTeam.swift; sourceTree = "<group>"; };
 		CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTeamRepository.swift; sourceTree = "<group>"; };
 		CFEE3DD02680BB29003409B9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				CF4920D5267B67E8003A4716 /* BannerItem.swift */,
 				CF4920D8267B68AC003A4716 /* InfoItem.swift */,
 				CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */,
+				CFEE3DC92680AA48003409B9 /* FavouriteTeam.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,
 				CFEE3DCE2680BB09003409B9 /* FormulaTeamRepository.swift in Sources */,
 				CF4920F0267B7251003A4716 /* UIImageView.swift in Sources */,
+				CFEE3DCA2680AA48003409B9 /* FavouriteTeam.swift in Sources */,
 				CF4920D6267B67E8003A4716 /* BannerItem.swift in Sources */,
 				CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */,
 				CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */,
