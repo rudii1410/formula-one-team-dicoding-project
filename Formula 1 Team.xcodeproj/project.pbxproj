@@ -30,7 +30,8 @@
 		CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */; };
 		CFEDD99A267C8EDD00D0FE4D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */; };
 		CFEE3DB426808F26003409B9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB326808F26003409B9 /* APIError.swift */; };
-		CFEE3DB82680944E003409B9 /* SportDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB72680944E003409B9 /* SportDBService.swift */; };
+		CFEE3DCE2680BB09003409B9 /* FormulaTeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */; };
+		CFEE3DD12680BB29003409B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DD02680BB29003409B9 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +60,8 @@
 		CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneTeam.swift; sourceTree = "<group>"; };
 		CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		CFEE3DB326808F26003409B9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		CFEE3DB72680944E003409B9 /* SportDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDBService.swift; sourceTree = "<group>"; };
+		CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTeamRepository.swift; sourceTree = "<group>"; };
+		CFEE3DD02680BB29003409B9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		CF79913A26773F5300B00F54 /* Formula 1 Team */ = {
 			isa = PBXGroup;
 			children = (
+				CFEE3DCC2680BADE003409B9 /* Repository */,
 				CFEDD98B267C557D00D0FE4D /* Network */,
 				CF4920EE267B7220003A4716 /* Extension */,
 				CF4920CD267B66E5003A4716 /* Model */,
@@ -204,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CFEE3DB326808F26003409B9 /* APIError.swift */,
-				CFEE3DB72680944E003409B9 /* SportDBService.swift */,
+				CFEE3DD02680BB29003409B9 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -215,6 +218,14 @@
 				CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		CFEE3DCC2680BADE003409B9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +310,12 @@
 				CF4920EB267B6B37003A4716 /* InfoItemCell.swift in Sources */,
 				CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */,
 				CFEDD99A267C8EDD00D0FE4D /* ProgressHUD.swift in Sources */,
-				CFEE3DB82680944E003409B9 /* SportDBService.swift in Sources */,
 				CF492103267B76BE003A4716 /* TeamDetailVC.swift in Sources */,
 				CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */,
 				CF4920E5267B6B21003A4716 /* BannerItemCell.swift in Sources */,
+				CFEE3DD12680BB29003409B9 /* NetworkManager.swift in Sources */,
 				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,
+				CFEE3DCE2680BB09003409B9 /* FormulaTeamRepository.swift in Sources */,
 				CF4920F0267B7251003A4716 /* UIImageView.swift in Sources */,
 				CF4920D6267B67E8003A4716 /* BannerItem.swift in Sources */,
 				CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */,

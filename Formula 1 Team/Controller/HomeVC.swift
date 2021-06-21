@@ -31,8 +31,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     private func loadFormulaOneTeam() {
-        let service = SportDBService()
-        service.getTeamList { (result) in
+        let service = FormulaTeamRepository()
+        service.fetchTeamList { (result) in
             DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success(let response):

@@ -1,5 +1,5 @@
 //
-//  SportDBService.swift
+//  NetworkManager.swift
 //  Formula 1 Team
 //
 //  Created by Rudiyanto on 21/06/21.
@@ -7,21 +7,19 @@
 
 import Foundation
 
-class SportDBService {
-    private let baseUrl = "https://www.thesportsdb.com/api/v1/json/1"
+class NetworkManager {
+    private let path: String!
+    private let method: String!
     
-    func getTeamList(completion: @escaping((Result<Teams, APIError>) -> Void)) {
-        request(endpoint: "lookup_all_teams.php?id=4370", method: "GET", completion: completion)
+    init(url: String, method: String = "GET") {
+        self.path = url
+        self.method = method
     }
     
-    private func request<T: Codable>(endpoint: String, method: String, completion: @escaping((Result<T, APIError>) -> Void)) {
-        let path = "\(baseUrl)/\(endpoint)"
+    func request<T: Codable>(completion: @escaping((Result<T, APIError>) -> Void)) {
         guard let url = URL(string: path) else { completion(.failure(.internalError)); return }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = method
-        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
-        
+        let request = getRequestUrl(url: url)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else { completion(.failure(.serverError)); return }
             
@@ -34,5 +32,13 @@ class SportDBService {
             }
         }
         task.resume()
+    }
+    
+    private func getRequestUrl(url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = method
+        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
+        
+        return request
     }
 }
