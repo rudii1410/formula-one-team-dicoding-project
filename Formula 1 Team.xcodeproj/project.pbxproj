@@ -27,6 +27,10 @@
 		CF79915A267741B200B00F54 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF799158267741B200B00F54 /* TeamCell.swift */; };
 		CF79915B267741B200B00F54 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF799159267741B200B00F54 /* TeamCell.xib */; };
 		CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79915D26774FBA00B00F54 /* FavouritesVC.swift */; };
+		CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */; };
+		CFEDD99A267C8EDD00D0FE4D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */; };
+		CFEE3DB426808F26003409B9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB326808F26003409B9 /* APIError.swift */; };
+		CFEE3DB82680944E003409B9 /* SportDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB72680944E003409B9 /* SportDBService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		CF799158267741B200B00F54 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		CF799159267741B200B00F54 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		CF79915D26774FBA00B00F54 /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
+		CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneTeam.swift; sourceTree = "<group>"; };
+		CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		CFEE3DB326808F26003409B9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CFEE3DB72680944E003409B9 /* SportDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDBService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				CF4920D2267B679C003A4716 /* TeamDetailItem.swift */,
 				CF4920D5267B67E8003A4716 /* BannerItem.swift */,
 				CF4920D8267B68AC003A4716 /* InfoItem.swift */,
+				CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 		CF79913A26773F5300B00F54 /* Formula 1 Team */ = {
 			isa = PBXGroup;
 			children = (
+				CFEDD98B267C557D00D0FE4D /* Network */,
 				CF4920EE267B7220003A4716 /* Extension */,
 				CF4920CD267B66E5003A4716 /* Model */,
 				CF7991562677419300B00F54 /* View */,
@@ -174,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CF492102267B76BE003A4716 /* TeamDetailVC.xib */,
+				CFEDD998267C8EB400D0FE4D /* Component */,
 				CF7991572677419800B00F54 /* Table Cell */,
 			);
 			path = View;
@@ -187,6 +198,23 @@
 				CF4920DC267B6AD3003A4716 /* TeamCell */,
 			);
 			path = "Table Cell";
+			sourceTree = "<group>";
+		};
+		CFEDD98B267C557D00D0FE4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE3DB326808F26003409B9 /* APIError.swift */,
+				CFEE3DB72680944E003409B9 /* SportDBService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CFEDD998267C8EB400D0FE4D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,15 +294,19 @@
 				CF4920D3267B679C003A4716 /* TeamDetailItem.swift in Sources */,
 				CF79915A267741B200B00F54 /* TeamCell.swift in Sources */,
 				CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */,
+				CFEE3DB426808F26003409B9 /* APIError.swift in Sources */,
 				CF79914026773F5300B00F54 /* HomeVC.swift in Sources */,
 				CF4920EB267B6B37003A4716 /* InfoItemCell.swift in Sources */,
 				CF79913C26773F5300B00F54 /* AppDelegate.swift in Sources */,
+				CFEDD99A267C8EDD00D0FE4D /* ProgressHUD.swift in Sources */,
+				CFEE3DB82680944E003409B9 /* SportDBService.swift in Sources */,
 				CF492103267B76BE003A4716 /* TeamDetailVC.swift in Sources */,
 				CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */,
 				CF4920E5267B6B21003A4716 /* BannerItemCell.swift in Sources */,
 				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,
 				CF4920F0267B7251003A4716 /* UIImageView.swift in Sources */,
 				CF4920D6267B67E8003A4716 /* BannerItem.swift in Sources */,
+				CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */,
 				CF79913E26773F5300B00F54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
