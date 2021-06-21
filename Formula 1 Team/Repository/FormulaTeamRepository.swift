@@ -20,7 +20,6 @@ class FormulaTeamRepository {
     
     func storeAsFavourite(team: FormulaOneTeam) {
         try! realm.write {
-            let team = FavouriteTeam(team: team)
             realm.add(team)
         }
     }
@@ -32,11 +31,16 @@ class FormulaTeamRepository {
     
     func deleteFromFavouritesList(id teamId: String) {
         try! realm.write {
-            realm.delete(getFavouriteTeamById(id: teamId))
+            let favouriteTeam = getFavouriteTeamById(id: teamId)[0]
+            realm.delete(favouriteTeam)
         }
     }
     
-    func getFavouriteTeamById(id teamId: String) -> Results<FavouriteTeam> {
-        return realm.objects(FavouriteTeam.self).filter("teamId = %@", teamId)
+    func getFavouriteTeamById(id teamId: String) -> [FormulaOneTeam] {
+        return realm.objects(FormulaOneTeam.self).filter("idTeam = %@", teamId).map { $0 }
+    }
+    
+    func getAllFavouritesTeam() -> [FormulaOneTeam] {
+        return realm.objects(FormulaOneTeam.self).map { $0 }
     }
 }

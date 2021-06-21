@@ -6,29 +6,30 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct FormulaOneTeam : Codable {
-    let idTeam : String?
-    let strTeam : String?
-    let intFormedYear : String?
-    let strSport : String?
-    let strLeague : String?
-    let idLeague : String?
-    let strStadium : String?
-    let strStadiumLocation : String?
-    let strWebsite : String?
-    let strFacebook : String?
-    let strTwitter : String?
-    let strInstagram : String?
-    let strDescriptionEN : String?
-    let strCountry : String?
-    let strTeamLogo : String?
-    let strTeamFanart1 : String?
-    let strTeamFanart2 : String?
-    let strTeamFanart3 : String?
-    let strTeamFanart4 : String?
-    let strTeamBanner : String?
-    let strYoutube : String?
+class FormulaOneTeam : Object, Codable {
+    @objc dynamic var idTeam : String?
+    @objc dynamic var strTeam : String?
+    @objc dynamic var intFormedYear : String?
+    @objc dynamic var strSport : String?
+    @objc dynamic var strLeague : String?
+    @objc dynamic var idLeague : String?
+    @objc dynamic var strStadium : String?
+    @objc dynamic var strStadiumLocation : String?
+    @objc dynamic var strWebsite : String?
+    @objc dynamic var strFacebook : String?
+    @objc dynamic var strTwitter : String?
+    @objc dynamic var strInstagram : String?
+    @objc dynamic var strDescriptionEN : String?
+    @objc dynamic var strCountry : String?
+    @objc dynamic var strTeamLogo : String?
+    @objc dynamic var strTeamFanart1 : String?
+    @objc dynamic var strTeamFanart2 : String?
+    @objc dynamic var strTeamFanart3 : String?
+    @objc dynamic var strTeamFanart4 : String?
+    @objc dynamic var strTeamBanner : String?
+    @objc dynamic var strYoutube : String?
     
     func getHeadquarter() -> String {
         var headQuarter = "Unknown"
