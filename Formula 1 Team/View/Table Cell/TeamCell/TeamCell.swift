@@ -13,8 +13,8 @@ class TeamCell: UITableViewCell {
     @IBOutlet private weak var teamName: UILabel!
     @IBOutlet private weak var teamOrigin: UILabel!
     
-    func setData(teamImage img: UIImage, teamName name: String, teamOrigin origin: String) {
-        teamImage.image = img
+    func setData(teamImage img: URL, teamName name: String, teamOrigin origin: String) {
+        teamImage.fromUrl(from: img)
         teamName.text = name
         teamOrigin.text = origin
     }
