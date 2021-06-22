@@ -30,7 +30,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I0M-Zq-rgH" secondAttribute="bottom" id="hQp-Ee-HjL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IxD-Vs-ppK"/>
+                    <navigationItem key="navigationItem" title="Formula One Teams" id="LyN-5Z-Nat"/>
                     <connections>
                         <outlet property="teamsTableView" destination="I0M-Zq-rgH" id="4Er-MW-GhM"/>
                     </connections>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1688" y="94"/>
         </scene>
-        <!--Home Navigation Controller-->
+        <!--Formula One Teams-->
         <scene sceneID="w6J-a7-7uj">
             <objects>
-                <navigationController title="Home Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="0e2-qR-vlv" sceneMemberID="viewController">
+                <navigationController title="Formula One Teams" automaticallyAdjustsScrollViewInsets="NO" id="0e2-qR-vlv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="z5D-tj-gN6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tkh-19-Cv2">
@@ -126,7 +126,7 @@
                             <constraint firstItem="H0w-aN-15R" firstAttribute="centerY" secondItem="s4W-e9-q7m" secondAttribute="centerY" id="uiQ-FV-lTN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UOw-Gp-2pN"/>
+                    <navigationItem key="navigationItem" title="Profile" id="M1u-4d-DRn"/>
                     <connections>
                         <outlet property="profileImage" destination="oBM-Xu-bcu" id="6yx-Ef-OHG"/>
                     </connections>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1687" y="819"/>
         </scene>
-        <!--Profile Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="hUn-ph-NP0">
             <objects>
-                <navigationController title="Profile Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="Wmg-Ha-lzw" sceneMemberID="viewController">
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="Wmg-Ha-lzw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="sED-4G-se8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TYF-he-dSz">
@@ -176,7 +176,7 @@
                             <constraint firstItem="5CU-je-rJJ" firstAttribute="top" secondItem="7V8-qY-hXp" secondAttribute="top" id="uNP-hs-NSE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Mwl-B9-dg9"/>
+                    <navigationItem key="navigationItem" title="My Favourite Teams" id="Dqt-FW-VMw"/>
                     <connections>
                         <outlet property="favouriteTeamsTableView" destination="5CU-je-rJJ" id="XGf-NT-bzm"/>
                     </connections>
@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="1502.6785714285713"/>
         </scene>
-        <!--Favourite Navigation Controller-->
+        <!--My Favourite-->
         <scene sceneID="R2t-j2-QHE">
             <objects>
-                <navigationController title="Favourite Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="0q7-t0-JOU" sceneMemberID="viewController">
+                <navigationController title="My Favourite" automaticallyAdjustsScrollViewInsets="NO" id="0q7-t0-JOU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favourites" image="heart.fill" catalog="system" id="eTb-zS-mBi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vns-Lf-8yq">

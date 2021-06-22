@@ -14,12 +14,14 @@ class TeamDetailVC: UITableViewController {
     var isFavourite: Bool = false
     var selectedTeam: FormulaOneTeam? = nil
     let repo = FormulaTeamRepository()
+    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
         setupNavigationBar()
         self.hidesBottomBarWhenPushed = true
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
     }
     
     private func setupNavigationBar() {
@@ -85,12 +87,20 @@ class TeamDetailVC: UITableViewController {
 
     @objc func onFavouritePressed() {
         let isFavourite = !self.isFavourite
+        
+        guard let team = selectedTeam else { return }
+        
         if (isFavourite) {
-            if let team = selectedTeam { repo.storeAsFavourite(team: team) }
+            repo.storeAsFavourite(team: team)
+            alert.message = "\(team.strTeam!) is added to favourites list"
         } else {
-            if let idTeam = selectedTeam?.idTeam { repo.deleteFromFavouritesList(id: idTeam) }
+            repo.deleteFromFavouritesList(id: team.idTeam!)
+            alert.message = "\(team.strTeam!) is removed from favourites list"
         }
+        
         setFavourite(isFavourite: isFavourite)
+        
+        self.present(alert, animated: true)
     }
     
     private func setFavourite(isFavourite: Bool) {
