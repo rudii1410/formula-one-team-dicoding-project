@@ -35,6 +35,7 @@
 		CFEE3DCE2680BB09003409B9 /* FormulaTeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */; };
 		CFEE3DD12680BB29003409B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DD02680BB29003409B9 /* NetworkManager.swift */; };
 		CFEFE3AB268207E7008E1A12 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFE3AA268207E7008E1A12 /* UITableView.swift */; };
+		CFEFE3AE268216BB008E1A12 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFE3AD268216BB008E1A12 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		CFEE3DCD2680BB09003409B9 /* FormulaTeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTeamRepository.swift; sourceTree = "<group>"; };
 		CFEE3DD02680BB29003409B9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CFEFE3AA268207E7008E1A12 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		CFEFE3AD268216BB008E1A12 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				CF79913F26773F5300B00F54 /* HomeVC.swift */,
 				CF492101267B76BE003A4716 /* TeamDetailVC.swift */,
 				CF79915D26774FBA00B00F54 /* FavouritesVC.swift */,
+				CFEFE3AD268216BB008E1A12 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEFE3AE268216BB008E1A12 /* ProfileVC.swift in Sources */,
 				CF4920D3267B679C003A4716 /* TeamDetailItem.swift in Sources */,
 				CF79915A267741B200B00F54 /* TeamCell.swift in Sources */,
 				CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */,

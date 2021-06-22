@@ -81,14 +81,55 @@
         <!--Profile-->
         <scene sceneID="rhs-W1-LHy">
             <objects>
-                <viewController title="Profile" id="NOo-ka-R5V" sceneMemberID="viewController">
+                <viewController title="Profile" id="NOo-ka-R5V" customClass="ProfileVC" customModule="Formula_1_Team" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4W-e9-q7m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-aN-15R">
+                                <rect key="frame" x="67.5" y="276" width="279" height="344.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-Xu-bcu">
+                                        <rect key="frame" x="39.5" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="8k5-6r-ySD"/>
+                                            <constraint firstAttribute="height" constant="200" id="whK-8f-CxL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rudiyanto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21F-K4-iB4">
+                                        <rect key="frame" x="63.5" y="212" width="152" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Engineer, Android" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2j-5f-uS1">
+                                        <rect key="frame" x="0.0" y="262.5" width="279" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ird-kU-K6n">
+                                        <rect key="frame" x="33.5" y="303.5" width="212" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="https://rudiyanto.dev"/>
+                                        <connections>
+                                            <action selector="webBtnPressed:" destination="NOo-ka-R5V" eventType="touchUpInside" id="8mI-KH-S49"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PDu-vL-Lfw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H0w-aN-15R" firstAttribute="centerX" secondItem="s4W-e9-q7m" secondAttribute="centerX" id="lhB-Kx-6Nw"/>
+                            <constraint firstItem="H0w-aN-15R" firstAttribute="centerY" secondItem="s4W-e9-q7m" secondAttribute="centerY" id="uiQ-FV-lTN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UOw-Gp-2pN"/>
+                    <connections>
+                        <outlet property="profileImage" destination="oBM-Xu-bcu" id="6yx-Ef-OHG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59P-Et-bfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
