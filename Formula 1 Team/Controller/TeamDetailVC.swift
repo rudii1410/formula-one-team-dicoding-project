@@ -12,13 +12,14 @@ class TeamDetailVC: UITableViewController {
 
     var items: [TeamDetailItem] = []
     var isFavourite: Bool = false
-    var team: FormulaOneTeam? = nil
+    var selectedTeam: FormulaOneTeam? = nil
     let repo = FormulaTeamRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
         setupNavigationBar()
+        self.hidesBottomBarWhenPushed = true
     }
     
     private func setupNavigationBar() {
@@ -46,7 +47,7 @@ class TeamDetailVC: UITableViewController {
     
     func setData(data: FormulaOneTeam) {
         self.title = data.strTeam!
-        self.team = data
+        selectedTeam = FormulaOneTeam(value: data)
         
         setFavourite(isFavourite: repo.isTeamInFavouritesList(id: data.idTeam!))
         
@@ -85,9 +86,9 @@ class TeamDetailVC: UITableViewController {
     @objc func onFavouritePressed() {
         let isFavourite = !self.isFavourite
         if (isFavourite) {
-            if let team = team { repo.storeAsFavourite(team: team) }
+            if let team = selectedTeam { repo.storeAsFavourite(team: team) }
         } else {
-            if let idTeam = team?.idTeam { repo.deleteFromFavouritesList(id: idTeam) }
+            if let idTeam = selectedTeam?.idTeam { repo.deleteFromFavouritesList(id: idTeam) }
         }
         setFavourite(isFavourite: isFavourite)
     }
