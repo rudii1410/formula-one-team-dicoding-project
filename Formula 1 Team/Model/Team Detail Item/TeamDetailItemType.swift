@@ -8,4 +8,5 @@
 enum TeamDetailItemType {
     case bannerWithTeamName
     case infoItem
+    case imageSlider
 }
