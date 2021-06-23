@@ -28,6 +28,8 @@
 		CF79915B267741B200B00F54 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF799159267741B200B00F54 /* TeamCell.xib */; };
 		CF79915E26774FBA00B00F54 /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79915D26774FBA00B00F54 /* FavouritesVC.swift */; };
 		CFD045F22683603B00D6AC07 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD045F12683603B00D6AC07 /* ImageSlider.swift */; };
+		CFD045F9268362A600D6AC07 /* ImageSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD045F7268362A600D6AC07 /* ImageSliderCell.swift */; };
+		CFD045FA268362A600D6AC07 /* ImageSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD045F8268362A600D6AC07 /* ImageSliderCell.xib */; };
 		CFEDD992267C859D00D0FE4D /* FormulaOneTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */; };
 		CFEDD99A267C8EDD00D0FE4D /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */; };
 		CFEE3DB426808F26003409B9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE3DB326808F26003409B9 /* APIError.swift */; };
@@ -63,6 +65,8 @@
 		CF799159267741B200B00F54 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		CF79915D26774FBA00B00F54 /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
 		CFD045F12683603B00D6AC07 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		CFD045F7268362A600D6AC07 /* ImageSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCell.swift; sourceTree = "<group>"; };
+		CFD045F8268362A600D6AC07 /* ImageSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSliderCell.xib; sourceTree = "<group>"; };
 		CFEDD991267C859D00D0FE4D /* FormulaOneTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneTeam.swift; sourceTree = "<group>"; };
 		CFEDD999267C8EDD00D0FE4D /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		CFEE3DB326808F26003409B9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 		CF7991572677419800B00F54 /* Table Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CFD045F62683627100D6AC07 /* ImageSliderCell */,
 				CF4920E8267B6B28003A4716 /* InfoItemCell */,
 				CF4920DD267B6ADE003A4716 /* BannerItemCell */,
 				CF4920DC267B6AD3003A4716 /* TeamCell */,
@@ -222,6 +227,15 @@
 				CF4920CF267B6714003A4716 /* TeamDetailItemType.swift */,
 			);
 			path = "Team Detail Item";
+			sourceTree = "<group>";
+		};
+		CFD045F62683627100D6AC07 /* ImageSliderCell */ = {
+			isa = PBXGroup;
+			children = (
+				CFD045F7268362A600D6AC07 /* ImageSliderCell.swift */,
+				CFD045F8268362A600D6AC07 /* ImageSliderCell.xib */,
+			);
+			path = ImageSliderCell;
 			sourceTree = "<group>";
 		};
 		CFEDD98B267C557D00D0FE4D /* Network */ = {
@@ -315,6 +329,7 @@
 			files = (
 				CF79915B267741B200B00F54 /* TeamCell.xib in Resources */,
 				CF4920E6267B6B21003A4716 /* BannerItemCell.xib in Resources */,
+				CFD045FA268362A600D6AC07 /* ImageSliderCell.xib in Resources */,
 				CF79914826773F5400B00F54 /* LaunchScreen.storyboard in Resources */,
 				CF79914526773F5400B00F54 /* Assets.xcassets in Resources */,
 				CF492104267B76BE003A4716 /* TeamDetailVC.xib in Resources */,
@@ -342,6 +357,7 @@
 				CF492103267B76BE003A4716 /* TeamDetailVC.swift in Sources */,
 				CF4920D9267B68AC003A4716 /* InfoItem.swift in Sources */,
 				CFEFE3AB268207E7008E1A12 /* UITableView.swift in Sources */,
+				CFD045F9268362A600D6AC07 /* ImageSliderCell.swift in Sources */,
 				CF4920E5267B6B21003A4716 /* BannerItemCell.swift in Sources */,
 				CFEE3DD12680BB29003409B9 /* NetworkManager.swift in Sources */,
 				CF4920D0267B6714003A4716 /* TeamDetailItemType.swift in Sources */,

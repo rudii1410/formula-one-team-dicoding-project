@@ -39,6 +39,10 @@ class TeamDetailVC: UITableViewController {
             UINib(nibName: "InfoItemCell", bundle: nil),
             forCellReuseIdentifier: "InfoItemCell"
         )
+        tableView.register(
+            UINib(nibName: "ImageSliderCell", bundle: nil),
+            forCellReuseIdentifier: "ImageSliderCell"
+        )
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
@@ -76,6 +80,11 @@ class TeamDetailVC: UITableViewController {
         items.append(InfoItem(
             title: "Teams Origin",
             desc: data.strCountry!
+        ))
+        
+        items.append(ImageSlider(
+            title: "Gallery",
+            imagesUrl: data.getFanart()
         ))
         
         tableView.reloadData()
@@ -124,6 +133,11 @@ class TeamDetailVC: UITableViewController {
         case .infoItem:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "InfoItemCell", for: indexPath) as? InfoItemCell {
                 cell.setData(data: item as! InfoItem)
+                return cell
+            }
+        case .imageSlider:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageSliderCell", for: indexPath) as? ImageSliderCell {
+                cell.setData(data: item as! ImageSlider)
                 return cell
             }
         }

@@ -38,6 +38,17 @@ class FormulaOneTeam : Object, Codable {
         
         return headQuarter
     }
+    
+    func getFanart() -> [String] {
+        var result: [String] = []
+        
+        if let image1 = strTeamFanart1 { result.append(image1) }
+        if let image2 = strTeamFanart2 { result.append(image2) }
+        if let image3 = strTeamFanart3 { result.append(image3) }
+        if let image4 = strTeamFanart4 { result.append(image4) }
+        
+        return result
+    }
 }
 
 struct Teams: Codable {
