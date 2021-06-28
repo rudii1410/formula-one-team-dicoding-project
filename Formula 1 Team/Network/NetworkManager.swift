@@ -17,18 +17,27 @@ class NetworkManager {
     }
     
     func request<T: Codable>(completion: @escaping((Result<T, APIError>) -> Void)) {
-        guard let url = URL(string: path) else { completion(.failure(.internalError)); return }
+        guard let url = URL(string: path) else {
+            let error = APIError(type: .internalError, message: "Fail parsing URL")
+            completion(.failure(error))
+            return
+        }
         
         let request = getRequestUrl(url: url)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard error == nil else { completion(.failure(.serverError)); return }
+            guard error == nil else {
+                var err = APIError(type: .serverError, message: error!.localizedDescription)
+                err.type = .serverError
+                completion(.failure(err));
+                return
+            }
             
             do {
-                guard let data = data else { completion(.failure(.serverError)); return }
+                guard let data = data else { completion(.failure(APIError(type: .serverError))); return }
                 let object = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(object))
             } catch {
-                completion(.failure(.parsingError))
+                completion(.failure(APIError(type: .parsingError, message: "Error on parsing")))
             }
         }
         task.resume()

@@ -13,12 +13,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var formulaOneTeams: [FormulaOneTeam] = []
     @IBOutlet private weak var teamsTableView: UITableView!
     private let progressHUD = ProgressHUD(text: "Loading data")
+    private var loadDataAttempt = 0
+    private let MAX_LOAD_DATA_ATTEMPT = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addSubview(progressHUD)
-        showLoadingDialog()
         
         teamsTableView.dataSource = self
         teamsTableView.delegate = self
@@ -31,6 +32,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     private func loadFormulaOneTeam() {
+        showLoadingDialog()
+        
         let service = FormulaTeamRepository()
         service.fetchTeamList { (result) in
             DispatchQueue.main.async { [weak self] in
@@ -41,7 +44,18 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     }
                     self?.teamsTableView.reloadData()
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+                    if self!.loadDataAttempt < self!.MAX_LOAD_DATA_ATTEMPT {
+                        alert.addAction(UIAlertAction(title: "Reload", style: .default) { _ in
+                            self?.loadDataAttempt += 1
+                            self?.loadFormulaOneTeam()
+                        })
+                        alert.message = error.message
+                    } else {
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        alert.message = "Unable to load the data. Please try again later"
+                    }
+                    self?.present(alert, animated: true)
                 }
                 
                 self?.hideLoadingDialog()
