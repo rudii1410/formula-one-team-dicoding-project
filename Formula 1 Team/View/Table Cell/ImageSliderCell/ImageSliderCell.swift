@@ -16,16 +16,6 @@ class ImageSliderCell: UITableViewCell {
     private let imageSize = 150
     private let imagePadding = 6
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func setData(data: ImageSlider) {
         self.data = data
         

@@ -20,10 +20,6 @@ class BannerItemCell: UITableViewCell {
         teamLogo.layer.cornerRadius = teamLogo.frame.height / 2
         teamLogo.clipsToBounds = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     func setData(data: BannerItem) {
         if let bannerUrl = data.teamBannerUrl { teamBanner.fromUrl(from: bannerUrl) } else { teamBanner.image = placeholderImage }

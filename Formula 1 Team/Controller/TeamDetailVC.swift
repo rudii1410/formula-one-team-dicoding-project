@@ -124,7 +124,7 @@ class TeamDetailVC: UITableViewController {
     }
     
     private func showImagePopup(url rawUrl: String) {
-        // https://stackoverflow.com/questions/34694377/swift-how-can-i-make-an-image-full-screen-when-clicked-and-then-original-size
+        //https://stackoverflow.com/questions/34694377/swift-how-can-i-make-an-image-full-screen-when-clicked-and-then-original-size
         guard let url = URL(string: rawUrl) else { return }
         
         let imageView = UIImageView()
@@ -173,5 +173,4 @@ class TeamDetailVC: UITableViewController {
         
         return UITableViewCell()
     }
-    
 }
