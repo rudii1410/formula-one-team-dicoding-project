@@ -106,11 +106,12 @@ class TeamDetailVC: UITableViewController {
         guard let team = selectedTeam else { return }
         
         if (isFavourite) {
-            repo.storeAsFavourite(team: team)
+            repo.storeAsFavourite(team: FormulaOneTeam(value: team))
             alert.message = "\(team.strTeam!) is added to favourites list"
         } else {
+            let teamName = team.strTeam!
             repo.deleteFromFavouritesList(id: team.idTeam!)
-            alert.message = "\(team.strTeam!) is removed from favourites list"
+            alert.message = "\(teamName) is removed from favourites list"
         }
         
         setFavourite(isFavourite: isFavourite)
