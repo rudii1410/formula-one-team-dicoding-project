@@ -46,6 +46,7 @@ class FormulaOneTeam : Object, Codable {
         if let image2 = strTeamFanart2 { result.append(image2) }
         if let image3 = strTeamFanart3 { result.append(image3) }
         if let image4 = strTeamFanart4 { result.append(image4) }
+        if let image5 = strTeamBanner { result.append(image5) }
         
         return result
     }

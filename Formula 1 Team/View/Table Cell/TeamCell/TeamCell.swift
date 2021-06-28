@@ -23,6 +23,7 @@ class TeamCell: UITableViewCell {
         super.awakeFromNib()
         
         teamImage.layer.cornerRadius = teamImage.frame.height / 2
+        teamImage.layer.borderWidth = 1
         teamImage.clipsToBounds = true
     }
 

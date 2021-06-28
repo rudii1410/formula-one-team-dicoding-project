@@ -33,7 +33,7 @@ class FavouritesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = favouritesTeam.count
         if count == 0 {
-            self.favouriteTeamsTableView.setEmptyMessage("Belum ada tim favourite")
+            self.favouriteTeamsTableView.setEmptyMessage("Favourite teams list is empty")
         } else {
             self.favouriteTeamsTableView.restore()
         }
