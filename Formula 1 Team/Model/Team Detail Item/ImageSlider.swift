@@ -14,9 +14,11 @@ class ImageSlider : TeamDetailItem {
     
     var title: String
     var imagesUrl: [String]
+    var onImagesClick: (Int) -> Void
     
-    init(title: String, imagesUrl: [String]) {
+    init(title: String, imagesUrl: [String], onImageClick: @escaping (Int) -> Void) {
         self.title = title
         self.imagesUrl = imagesUrl
+        self.onImagesClick = onImageClick
     }
 }

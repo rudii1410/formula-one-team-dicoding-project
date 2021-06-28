@@ -82,10 +82,16 @@ class TeamDetailVC: UITableViewController {
             desc: data.strCountry!
         ))
         
-        items.append(ImageSlider(
-            title: "Gallery",
-            imagesUrl: data.getFanart()
-        ))
+        let gallery = data.getFanart()
+        if gallery.count > 0 {
+            items.append(ImageSlider(
+                title: "Gallery",
+                imagesUrl: gallery,
+                onImageClick: { (idx) in
+                    self.showImagePopup(url: gallery[idx])
+                }
+            ))
+        }
         
         tableView.reloadData()
     }
@@ -115,6 +121,29 @@ class TeamDetailVC: UITableViewController {
     private func setFavourite(isFavourite: Bool) {
         self.isFavourite = isFavourite
         self.navigationItem.rightBarButtonItem?.image = getFavImage()
+    }
+    
+    private func showImagePopup(url rawUrl: String) {
+        // https://stackoverflow.com/questions/34694377/swift-how-can-i-make-an-image-full-screen-when-clicked-and-then-original-size
+        guard let url = URL(string: rawUrl) else { return }
+        
+        let imageView = UIImageView()
+        imageView.fromUrl(from: url)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+        imageView.backgroundColor = .black
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissImagePopup))
+        imageView.addGestureRecognizer(tap)
+        
+        
+        self.navigationController?.view.addSubview(imageView)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    @objc private func dismissImagePopup(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     // MARK: - Table view data source
